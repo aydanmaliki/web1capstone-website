@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact page for [Your Name]">
+  <meta name="author" content="[Your Name]">
+  <title>Contact Me - My Website</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <header>
+    <h1>Contact Me 📩</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="education.html">Education</a> |
+    <a href="schedule.html">Weekly Schedule</a> |
+    <a href="contact.html">Contact Me</a> |
+    <a href="questionnaire.html">Questionnaire</a>
+  </nav>
+  <hr>
+
+  <section>
+    <h2>Send Me a Message</h2>
+    <form action="mailto:amaliki17577@ada.edu.az" method="post" enctype="text/plain">
+      <!-- Text Inputs -->
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <!-- Dropdown -->
+      <label for="reason">Reason for Contact:</label><br>
+      <select id="reason" name="reason">
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select><br><br>
+
+      <!-- Radio Buttons -->
+      <p>Preferred Contact Method:</p>
+      <input type="radio" id="email-contact" name="contact-method" value="Email" checked>
+      <label for="email-contact">Email</label><br>
+      <input type="radio" id="phone-contact" name="contact-method" value="Phone">
+      <label for="phone-contact">Phone</label><br><br>
+
+      <!-- Checkboxes -->
+      <p>Topics You’re Interested In:</p>
+      <input type="checkbox" id="html" name="interest" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="checkbox" id="css" name="interest" value="CSS">
+      <label for="css">CSS</label><br><br><br>
+
+      <!-- Textarea -->
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+      <!-- Submit -->
+      <input type="submit" value="Send">
+      <input type="reset" value="Clear">
+    </form>
+  </section>
+
+  <footer>
+    <hr>
+    <p>© 2025 aydan</p>
+  </footer>
+</body>
+</html>

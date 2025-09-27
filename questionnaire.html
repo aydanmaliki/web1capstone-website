@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Questionnaire page for [Your Name]">
+  <meta name="author" content="[Your Name]">
+  <title>Questionnaire - My Website</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <header>
+    <h1>Questionnaire 📝</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="education.html">Education</a> |
+    <a href="schedule.html">Weekly Schedule</a> |
+    <a href="contact.html">Contact Me</a> |
+    <a href="questionnaire.html">Questionnaire</a>
+  </nav>
+  <hr>
+
+  <section>
+    <h2>Please Fill Out This Short Survey</h2>
+    <form action="mailto:amaliki17577@ada.edu.az" method="post" enctype="text/plain">
+      <!-- Yes/No -->
+      <p>Did you like my website?</p>
+      <input type="radio" id="yes" name="enjoy-html" value="Yes">
+      <label for="yes">Yes</label>
+      <input type="radio" id="yess" name="enjoy-html" value="Yess">
+      <label for="yess">Definitly yes</label><br><br>
+
+      <!-- Checkboxes -->
+      <p>Your favorite pet? (Check all that apply)</p>
+      <input type="checkbox" id="dog" name="topics" value="Dog">
+      <label for="dog">Dogs</label><br>
+      <input type="checkbox" id="cat" name="topics" value="Cat">
+      <label for="cat">Cats</label><br>
+      <input type="checkbox" id="bunny" name="topics" value="Bunny">
+      <label for="bunny">Bunny</label><b><br>
+
+      <!-- Rating -->
+      <p>Rate my website out of 5 :</p>
+      <input type="number" id="rating" name="html-rating" min="1" max="5"><br><br>
+
+      <!-- Textarea -->
+      <label for="feedback">Additional Feedback:</label><br>
+      <textarea id="feedback" name="feedback" rows="5" cols="40"></textarea><br><br>
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Survey">
+    </form>
+  </section>
+
+  <footer>
+    <hr>
+    <p>© 2025 aydan</p>
+  </footer>
+</body>
+</html>
