@@ -6,6 +6,9 @@
   <meta name="author" content="Aydan Maliki">
   <title>Home - My Website</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -14,20 +17,22 @@
   </header>
 
  
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="education.html">Education</a> |
-    <a href="schedule.html">Weekly Schedule</a> |
-    <a href="contact.html">Contact Me</a> |
-    <a href="questionnaire.html">Questionnaire</a>
-  </nav>
+<nav class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="education.html">Education</a>
+  <a href="schedule.html">Weekly Schedule</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="questionnaire.html">Questionnaire</a>
+</nav>
+
 
   <hr>
 
 
-  <section>
+  <section class="about-section">
     <h2>About Me</h2>
-    <img src="profile.png" alt="Profile Picture" width="200">
+    <img src="profile.png" alt="Profile Picture" class="profile">
    
     <p>
       Hello! My name is Aydan.  
@@ -53,30 +58,6 @@
 
 
 
-<!-- 
-  <section>
-    <h2>One of My Favorite Songs 🎵</h2>
-    <p>This is one of my favorite songs right now:</p>
-    <span class="embedded-video--close-link" role="button" tabindex="0" aria-label="Close" style="display: none;"></span>
-
-     <iframe width="560" height="315" 
-      src="https://www.youtube.com/embed/UNo0TG9LwwI" 
-      title="YouTube video player" frameborder="0" 
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-     </iframe> 
-
-
-     <iframe href="https://www.youtube.com/embed/UNo0TG9LwwI" data-videoid="lJIrF4YjHfQ" class="embedded-video-large" 
-     frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-     referrerpolicy="strict-origin-when-cross-origin"
-      title="youtube video" width="400" height="230" 
-      src="https://www.youtube.com/embed/UNo0TG9LwwI" id="widget2">…</iframe>
-  </section>
--->
-
-
-
   <section>
     <h2>Link</h2>
     <p>
@@ -84,11 +65,10 @@
     </p>
   </section>
 
-
-
-
+  
 
   <footer>
+    <hr>
     <p> © 2025 Aydan</p>
   </footer>
 </body>

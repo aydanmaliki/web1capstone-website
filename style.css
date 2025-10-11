@@ -1,0 +1,194 @@
+/* ===== GLOBAL ===== */
+:root{
+  --accent:#7a5fff;
+  --accent-dark:#574b90;
+  --accent-weak:#e0e0ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #f4f4ff;
+  font-family: 'Poppins', sans-serif;
+  width: 90%;
+  margin: 0 auto;       /* centers the page */
+  color: #222;
+  line-height: 1.5;
+  padding-bottom: 40px; /* space for footer */
+}
+
+/* HR styling */
+hr {
+  width: 60%;
+  border: 2px dashed var(--accent);
+  margin: 20px auto;
+}
+
+/* decorative pseudo-element */
+h1::after {
+  content: " ✨";
+  color: var(--accent);
+}
+
+/* ===== NAVBAR (unified) ===== */
+nav.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--accent);
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 10px;
+  z-index: 999;
+}
+
+nav.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color .2s, transform .15s;
+  display: inline-block;
+}
+
+nav.navbar a:hover {
+  background-color: #a999ff;
+  transform: translateY(-2px);
+}
+
+/* active link: different color and not affected by hover */
+nav.navbar a.active {
+  background-color: var(--accent-dark);
+  pointer-events: none;
+}
+
+/* ===== INDEX: profile image (float + hover) ===== */
+.profile {
+  float: left;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;         /* keep aspect ratio and crop if needed */
+  border-radius: 50%;
+  margin-right: 18px;
+  transition: transform .25s ease;
+}
+
+.profile:hover {
+  transform: scale(1.1); /* visually grows ~220px by scale */
+}
+
+/* container that holds floated image and text */
+.about-section {
+  overflow: auto; /* clears the float */
+  padding-bottom: 10px;
+}
+
+/* ===== EDUCATION: table styling (flexible container) ===== */
+.education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 16px;
+  width: 80%;
+  max-width: 900px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--accent-weak);
+  font-weight: 600;
+}
+
+/* ===== GALLERY: grid layout + responsive ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* desktop 3 per row */
+  gap: 18px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform .22s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* responsive: mobile -> 1 column */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  /* stop float on mobile for profile image */
+  .profile { float: none; display: block; margin: 10px auto 12px; }
+}
+
+/* ===== FORM STYLING (contact) ===== */
+form {
+  width: 70%;
+  max-width: 720px;
+  margin: 12px auto 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(122,95,255,0.08);
+}
+
+/* ===== FOOTER ===== */
+footer { text-align: center; padding: 18px 0 40px; color: #444; font-size: 0.95rem; }
+
+/* Fix for mobile navbar */
+@media (max-width: 768px) {
+  nav.navbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 5px;
+  }
+  
+  nav.navbar a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/*  pseudo-element  */
+.contact-info::before {
+  content: "📧 ";
+  color: var(--accent);
+}
+
+/* Focus pseudo-class for form  */
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(122,95,255,0.1);
+}
+
